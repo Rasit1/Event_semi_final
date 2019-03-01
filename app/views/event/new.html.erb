@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      <h1>Ici creation des events</h1>
+      <form accept-charset="UTF-8" action="<%=event_index_path%>" method="post">
+      <%= token_tag %>
+      <input name="utf8" type="hidden" value="&#x2713;"/>
+      Start-date:<br/>
+      <input type='date' name='start_date'/><br/>
+      Duration:<br/>
+      <input type='integer' name='duration'/><br/>
+      Title:<br/>
+      <input type='text' name='title'/><br/>
+      Description:<br/>
+      <input type='textarea' name='description'/><br/>
+      Price:<br/>
+      <input type='integer' name='price'/><br/>
+      Location:<br/>
+      <input type='text' name='location'/><br/>
+
+      <input type='submit'/>
+
+      <%=link_to "Back", event_index_path%>
+  </body>
+</html>
